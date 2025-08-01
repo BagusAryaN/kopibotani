@@ -1,0 +1,220 @@
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/profil.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 35px;
+    cursor: pointer;
+    position: relative;
+    right: 35px;
+    top: 10px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fcfcf4;
+    text-transform: none;
+    font-family: Poppins;
+    font-weight: 350;
+} 
+
+.navbar ul li a.active{
+    font-weight: 700;
+}
+
+.navbar ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #fcfcf4;
+    font-weight: 700;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #fcfcf4;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.2s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.profile-content {
+    background-color: #fff; /* Dark green background */
+    background-position: center;
+    text-align: center;
+    color: #fcfcf4;
+    flex-grow: 1; /* Allow content to grow and push footer down */
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 100%;
+}
+
+.profile-title {
+    font-family: dauntea;
+    font-size: 7em; /* Large size for "PROFIL" text */
+    color: #2b4821; /* Green color for the title */
+    margin-top: -20px; /* Pull it up to overlap the hero section */
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 5; /* Ensure it's above other elements */
+    letter-spacing: 0.1em; /* Spacing between letters */
+}
+
+.profile-owner-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top of their container */
+    gap: 50px; /* Space between description and owner info */
+    max-width: 1000px;
+    margin: 0 auto 80px auto;
+    text-align: justify; /* Text alignment within these sections */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.owner-description {
+    flex: 2; /* Takes more space */
+    min-width: 300px; /* Minimum width before wrapping */
+    padding-right: 20px; /* Space from owner info */
+}
+
+.owner-description p {
+    color: #2b4821;
+    font-family: Poppins;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.owner-info {
+    flex: 1; /* Takes less space */
+    min-width: 200px; /* Minimum width before wrapping */
+    text-align: center;
+}
+
+.owner-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Cover the area, crop if necessary */
+    border: 5px solid #2b4821; /* Light green border */
+    margin-bottom: 15px;
+}
+
+.owner-role {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #2b4821; /* Lighter green for role */
+    margin-bottom: 5px;
+}
+
+.owner-name {
+    font-family: Poppins;
+    font-size: 1.8em;
+    color: #2b4821;
+    margin: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for images */
+    gap: 30px; /* Space between images */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px; /* Fixed height for gallery images */
+    object-fit: cover; /* Crop to fit, maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Styling for other generic pages (Produk, Kontak) */
+/* Re-use .page-content from previous response for these pages if they don't have unique designs */
+.page-content {
+    min-height: calc(100vh - 100px); /* Adjust height to fill screen minus header/footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 60px; /* Top padding for header, bottom for footer */
+    background-color: #557A59; /* A slightly lighter green for content pages */
+    color: #fcfcf4;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    flex-grow: 1; /* Allow content to grow and push footer down */
+}
+
+.page-content .container {
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.page-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #2b4821; /* Lighter green for headings */
+}
+
+.page-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.footer {
+    background-color: #2b4821; /* Dark green matching the image */
+    color: #fcfcf4;
+    text-align: center;
+    padding: 9px 0;
+    position: absolute;
+    bottom: -150%;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 11px;
+    font-family: Poppins;
+}

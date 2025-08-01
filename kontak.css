@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 140vh;
+    background-image: url(images/kontak.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 35px;
+    cursor: pointer;
+    position: relative;
+    right: 35px;
+    top: 10px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fcfcf4;
+    text-transform: none;
+    font-family: Poppins;
+    font-weight: 350;
+} 
+
+.navbar ul li a.active{
+    font-weight: 700;
+}
+
+.navbar ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #fcfcf4;
+    font-weight: 700;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #fcfcf4;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.2s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: grid;
+    gap: 50px; /* Space between the grid items */
+    padding: 30px 100px;
+    background-color: #fff;
+    align-items: start; /* Align items to the top of their cells */
+    position:relative;
+    top: 500px;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2em;
+    color: #2b4821; /* Green color for location icon and text */
+    position: relative;
+    left: 100%;
+    top: 0%;
+}
+
+.address .icon-custom {
+    width: 30px; /* Sesuaikan ukuran lebar ikon */
+    height: auto; /* Otomatis menyesuaikan tinggi agar proporsional */
+    /* Jika Anda menggunakan `gap` di parent `.address`, margin-right ini mungkin tidak diperlukan */
+    margin-right: 20px; /* Jarak antara ikon dan teks */
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    grid-column: 1 / 2; /* Place in the first column */
+    grid-row: 2 / 3; /* Place in the second row */
+    margin-top: 40px; /* Space from the address */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5em;
+    color: #2b4821;
+    position: relative;
+    top: -90px;
+    left: 10%;
+    font-family: Poppins;
+    font-weight: 520;
+}
+
+.contact-item p{
+    color: #2b4821;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.contact-item p a{
+    text-decoration: none;
+    color: #2b4821;
+    font-family: Poppins;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-item p a:hover{
+    font-weight: 700;
+    color: #14220f;
+}
+.contact-item .icon-custom {
+    width: 80px; /* Sesuaikan ukuran lebar ikon */
+    height: auto; /* Otomatis menyesuaikan tinggi agar proporsional */
+    /* Jika Anda menggunakan `gap` di parent `.address`, margin-right ini mungkin tidak diperlukan */
+    margin-right: 20px; /* Jarak antara ikon dan teks */
+}
+
+.contact-item i {
+    font-size: 1.8em;
+    color: #2b4821; /* Green color for icons */
+}
+
+.map {
+    grid-column: 2 / 3; /* Place in the second column */
+    grid-row: 1 / span 2; /* Span across both rows in the second column */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 120%;
+    height: 50%;
+    position: relative;
+    right: 10%;
+    top: 20%;
+}
+
+.map img,
+.map iframe {
+    width: 100%;
+    height: 100%; /* Adjust map height as needed */
+    border: none;
+    display: block;
+    
+}
+
+footer {
+    background-color: #2b4821; /* Dark green matching the image */
+    color: #fcfcf4;
+    text-align: center;
+    padding: 9px 0;
+    position: absolute;
+    bottom: -55%;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 11px;
+    font-family: Poppins;
+}
